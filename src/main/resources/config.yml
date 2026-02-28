@@ -1,0 +1,49 @@
+# ReportX Configuration
+# Plugin by abdoabk
+
+report:
+  cooldown-seconds: 120
+  max-per-day: 5
+  allow-offline: false
+  min-reason-length: 5
+  max-reason-length: 200
+
+evidence:
+  chat-snapshot: true
+  chat-lines: 20
+  inventory-snapshot: true   # captures full inventory + context on report
+  combat-snapshot: true
+
+database:
+  type: H2  # H2 or MYSQL
+  mysql:
+    host: localhost
+    port: 3306
+    database: reportx
+    username: root
+    password: password
+    pool-size: 10
+    use-ssl: false
+
+discord:
+  enabled: false
+  webhook-url: ""
+  notify-new-report: true
+  notify-resolved: true
+  notify-escalated: true
+  server-name: "My Server"
+
+staff:
+  auto-vanish-on-tp: true
+  unvanish-after-seconds: 30   # how long staff stays vanished after /report tp
+  broadcast-claim: true
+  broadcast-resolve: true
+  require-claim-to-close: true
+
+security:
+  sanitize-input: true
+  gdpr-mode: false  # true = no IP storage
+
+messages:
+  prefix: "&8[&cReport&4X&8] "
+  use-messages-file: true
