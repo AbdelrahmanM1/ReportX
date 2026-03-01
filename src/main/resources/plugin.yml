@@ -4,7 +4,7 @@ main: me.abdoabk.reportx.ReportXPlugin
 api-version: 1.21
 author: abdoabk
 description: Lightweight player reporting & moderation workflow plugin
-website: https://github.com/abdoabk/ReportX
+website: https://github.com/AbdelrahmanM1/ReportX
 
 commands:
   report:
