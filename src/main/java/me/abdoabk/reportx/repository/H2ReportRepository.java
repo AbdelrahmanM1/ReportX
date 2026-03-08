@@ -26,7 +26,7 @@ public class H2ReportRepository extends AbstractSQLRepository {
     protected Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
                 "jdbc:h2:" + config.getPath() +
-                        ";AUTO_SERVER=TRUE" +
+                        ";AUTO_SERVER=FALSE" +
                         ";MODE=MySQL" +
                         ";DATABASE_TO_LOWER=TRUE",
                 config.getUsername(),
