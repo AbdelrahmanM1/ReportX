@@ -1,0 +1,86 @@
+# ReportX Messages
+# Use & for color codes, {placeholder} for variables
+
+general:
+  prefix: "&8[&cReport&4X&8] "
+  no-permission: "&cYou don't have permission to do that."
+  player-not-found: "&cPlayer &e{player} &cnot found."
+  invalid-usage: "&cInvalid usage. Try: &e{usage}"
+  reload-success: "&aConfiguration reloaded successfully."
+
+report:
+  submit-success: "&aYour report against &e{accused} &ahas been submitted. ID: &e#{id}"
+  submit-cooldown: "&cYou must wait &e{time} &cbefore submitting another report."
+  submit-max-reached: "&cYou have reached the maximum reports for today (&e{max}&c)."
+  cannot-report-self: "&cYou cannot report yourself."
+  cannot-report-offline: "&cYou cannot report offline players."
+  duplicate-report: "&cYou already have an open report against &e{player}&c."
+  reason-too-short: "&cReason must be at least &e{min} &ccharacters."
+  reason-too-long: "&cReason must be at most &e{max} &ccharacters."
+  not-found: "&cReport &e#{id} &cnot found."
+  no-reports: "&cYou have no reports to display."
+  report-header: "&8&m---&r &cReport &e#{id} &8&m---"
+  report-reporter: " &7Reporter: &f{reporter}"
+  report-accused: " &7Accused: &f{accused}"
+  report-reason: " &7Reason: &f{reason}"
+  report-status: " &7Status: {status}"
+  report-time: " &7Submitted: &f{time}"
+  report-footer: "&8&m-----------"
+
+status:
+  open: "&e⬤ OPEN"
+  claimed: "&b⬤ CLAIMED"
+  resolved: "&a⬤ RESOLVED"
+  rejected: "&c⬤ REJECTED"
+  escalated: "&d⬤ ESCALATED"
+
+staff:
+  claim-success: "&aYou have claimed report &e#{id}&a."
+  claim-already: "&cThis report is already claimed by &e{staff}&c."
+  claim-broadcast: "&e{staff} &6has claimed report &e#{id}&6."
+  close-success: "&aReport &e#{id} &aclosed with verdict: &e{verdict}"
+  close-not-claimed: "&cYou must claim this report before closing it."
+  close-wrong-claimer: "&cThis report is claimed by &e{staff}&c. You cannot close it."
+  note-added: "&aNote added to report &e#{id}&a."
+  escalate-success: "&aReport &e#{id} &ahas been escalated."
+  teleport-success: "&aTeleporting to last known location of &e{player}&a."
+  teleport-no-location: "&cNo location data available for this report."
+  no-reports: "&cNo reports to display."
+  resolve-broadcast: "&6Report &e#{id} &6resolved by &e{staff}&6 - Verdict: &e{verdict}"
+  status-changed: "&aReport &e#{id} &astatus changed to &e{status}&a."
+
+stats:
+  header: "&8&m======&r &cReport&4X &cStats &8&m======"
+  total: " &7Total Reports: &f{total}"
+  open: " &7Open: &a{open}"
+  closed: " &7Resolved: &2{resolved}"
+  rejected: " &7Rejected: &c{rejected}"
+  most-reported: " &7Most Reported: &e{player} &7({count})"
+  most-active-staff: " &7Most Active Staff: &e{staff} &7({count})"
+  avg-resolution: " &7Avg Resolution Time: &f{time}"
+  footer: "&8&m=========================="
+
+gui:
+  player-title: "&cMy Reports"
+  staff-title: "&cReport Management"
+  report-item-name: "&e#&f{id} &7- &f{accused}"
+  report-item-lore:
+    - "&7Reason: &f{reason}"
+    - "&7Status: {status}"
+    - "&7Submitted: &f{time}"
+    - ""
+    - "&aLeft-Click &7to view details"
+  staff-item-lore:
+    - "&7Reporter: &f{reporter}"
+    - "&7Accused: &f{accused}"
+    - "&7Reason: &f{reason}"
+    - "&7Status: {status}"
+    - "&7Time: &f{time}"
+    - ""
+    - "&aLeft-Click &7to claim"
+    - "&eRight-Click &7to view details"
+    - "&cShift-Click &7to close"
+  next-page: "&aNext Page →"
+  prev-page: "&a← Previous Page"
+  close-button: "&cClose"
+  no-reports-item: "&cNo reports found"

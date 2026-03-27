@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    @apply bg-base-950 text-gray-100;
+    font-family: 'Syne', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-base-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-base-500 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-red-500; }
+}
+
+@layer components {
+  .card {
+    @apply bg-base-800 border border-base-600 rounded-xl p-5;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply btn bg-red-500 hover:bg-red-400 text-white;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent hover:bg-base-700 text-gray-300 border border-base-500;
+  }
+
+  .input {
+    @apply bg-base-700 border border-base-500 rounded-lg px-3 py-2 text-sm text-gray-100 outline-none
+           focus:border-red-500 transition-colors placeholder-gray-500 font-mono;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider;
+  }
+
+  .responsive-table {
+    @apply overflow-x-auto rounded-xl border border-base-600 bg-base-900;
+  }
+
+  .responsive-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    @apply whitespace-nowrap;
+  }
+}

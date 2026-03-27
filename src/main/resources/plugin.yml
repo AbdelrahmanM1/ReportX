@@ -1,0 +1,57 @@
+name: ReportX
+version: 1.0.0
+main: me.abdoabk.reportx.ReportXPlugin
+api-version: 1.21
+author: abdoabk
+description: Lightweight player reporting & moderation workflow plugin
+website: https://github.com/AbdelrahmanM1/ReportX
+
+commands:
+  report:
+    description: Report a player
+    usage: /report <player> <reason>
+    permission: reportx.use
+
+  reports:
+    description: View your submitted reports
+    usage: /reports [page]
+    permission: reportx.use
+
+  reportadmin:
+    description: Staff report management (claim, close, reject, escalate, view, tp, web, stats…)
+    usage: /reportadmin [subcommand] [args]
+    permission: reportx.staff
+
+  rstaff:
+    description: Legacy staff report panel (alias for /reportadmin)
+    usage: /rstaff [page]
+    permission: reportx.staff
+
+permissions:
+  reportx.use:
+    description: Allows players to submit and view their own reports
+    default: true
+
+  reportx.staff:
+    description: Allows staff to manage reports via /reportadmin
+    default: op
+
+  reportx.admin:
+    description: Allows admins to configure the plugin and view stats
+    default: op
+
+  reportx.bypass.cooldown:
+    description: Bypass report cooldown
+    default: op
+
+  reportx.override.claim:
+    description: Allow closing reports claimed by other staff
+    default: op
+
+  reportx.teleport:
+    description: Teleport to the location of a report (/reportadmin tp)
+    default: op
+
+  reportx.audit:
+    description: View audit logs (/reportadmin audit)
+    default: op

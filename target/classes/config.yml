@@ -1,0 +1,74 @@
+# ReportX Configuration
+# Plugin by abdoabk
+
+report:
+  cooldown-seconds: 120
+  max-per-day: 5
+  allow-offline: false
+  min-reason-length: 5
+  max-reason-length: 200
+
+evidence:
+  chat-snapshot: true
+  chat-lines: 20
+  inventory-snapshot: true
+  combat-snapshot: true
+
+database:
+  type: H2  # H2 or MYSQL
+  mysql:
+    host: localhost
+    port: 3306
+    database: reportx
+    username: root
+    password: password
+    pool-size: 10
+    use-ssl: false
+
+discord:
+  enabled: false
+  webhook-url: ""
+  notify-new-report: true
+  notify-resolved: true
+  notify-escalated: true
+  server-name: "My Server"
+
+staff:
+  auto-vanish-on-tp: true
+  unvanish-after-seconds: 30
+  broadcast-claim: true
+  broadcast-resolve: true
+  require-claim-to-close: true
+
+security:
+  sanitize-input: true
+  gdpr-mode: false
+
+messages:
+  prefix: "&8[&cReport&4X&8] "
+  use-messages-file: true
+
+# ── Web Dashboard ─────────────────────────────────────────────────────
+# Requires database.type: MYSQL
+web-dashboard:
+  # URL of your Vue dashboard (shown in /reportadmin web links)
+  url: "http://localhost:5173"
+
+  # URL of your Spring Boot API (used by the poller below)
+  api-url: "http://localhost:8080"
+
+  # REQUIRED: Must exactly match reportx.plugin.secret in application.properties
+  plugin-secret: "CHANGE_THIS_PLUGIN_SECRET"
+
+  # How often (seconds) the plugin polls the API for dashboard notifications
+  # Lower = faster in-game notifications; higher = less HTTP traffic
+  poll-interval-seconds: 10
+
+  # Set false to disable polling entirely (notifications won't fire for dashboard actions)
+  poll-notifications: true
+
+  # How long (minutes) before a /reportadmin web link expires
+  token-ttl-minutes: 30
+
+  # Cooldown (seconds) between /reportadmin web calls per player
+  cooldown-seconds: 300
