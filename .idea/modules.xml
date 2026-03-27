@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/reportx.iml" filepath="$PROJECT_DIR$/reportx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReportX (1).iml" filepath="$PROJECT_DIR$/ReportX (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/reportx-bukkit/reportx-bukkit.iml" filepath="$PROJECT_DIR$/reportx-bukkit/reportx-bukkit.iml" />
     </modules>
   </component>
 </project>
